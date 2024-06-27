@@ -1,5 +1,6 @@
 // pages/index.js
 
+import Navbar from '@/components/NavBar';
 import Head from 'next/head';
 
 export default function Homepage() {
@@ -13,26 +14,9 @@ export default function Homepage() {
 
       {/* Header */}
       <header className="bg-white shadow-md">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-sky-600">CMS Platform</h1>
-          <nav className="flex space-x-4">
-            <a href="#home" className="text-gray-600 hover:text-gray-800">
-              Home
-            </a>
-            <a href="#about" className="text-gray-600 hover:text-gray-800">
-              About
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-800">
-              Contact
-            </a>
-            <a href="/signup" className="text-gray-600 hover:text-gray-800">
-              Signup
-            </a>
-            <a href="/login" className="text-gray-600 hover:text-gray-800">
-              Login
-            </a>
-          </nav>
-        </div>
+       
+         <Navbar/>
+       
       </header>
 
       {/* Main Content */}

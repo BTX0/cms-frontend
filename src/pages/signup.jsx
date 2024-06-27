@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../app/globals.css';
+import Navbar from '@/components/NavBar';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,11 @@ const SignupForm = () => {
   };
 
   return (
+<>
+<Navbar/>
+    
     <div className="min-h-screen flex items-center justify-center bg-sky-100">
+        
       <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -169,6 +174,7 @@ const SignupForm = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
