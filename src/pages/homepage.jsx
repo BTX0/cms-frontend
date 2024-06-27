@@ -19,7 +19,7 @@ export default function Homepage() {
               Home
             </a>
             <a href="#about" className="text-gray-600 hover:text-gray-800 mx-2">
-              About
+              About dss
             </a>
             <a
               href="#contact"
