@@ -1,6 +1,6 @@
 // pages/index.js
 
-import Navbar from '@/components/NavBar';
+import Navbar from '@/components/Navbar';
 import Head from 'next/head';
 
 export default function Homepage() {
@@ -14,9 +14,9 @@ export default function Homepage() {
 
       {/* Header */}
       <header className="bg-white shadow-md">
-       
-         <Navbar/>
-       
+
+        <Navbar />
+
       </header>
 
       {/* Main Content */}
@@ -32,7 +32,7 @@ export default function Homepage() {
           </button>
         </section>
 
-        
+
 
         {/* Features Section */}
         <section id="features" className="mb-16">
@@ -69,7 +69,7 @@ export default function Homepage() {
         <section id="pricing" className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-sky-600 text-center">Pricing</h2>
           <div className="flex flex-col md:flex-row justify-center items-center md:space-x-6">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 max-w-xs mb-6 md:mb-0">
+            <div className="bg-white p-20 rounded-lg shadow-md hover:shadow-lg transition duration-300 max-w-xs mb-6 md:mb-0">
               <h4 className="text-xl font-bold mb-4 text-gray-800 text-center">Basic Plan</h4>
               <p className="text-gray-700 mb-4 text-center">$19/month</p>
               <ul className="text-gray-700 mb-6">
@@ -79,7 +79,7 @@ export default function Homepage() {
               </ul>
               <button className="bg-green-500 text-white w-full py-2 rounded hover:bg-green-600 transition duration-300">Choose Plan</button>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 max-w-xs mb-6 md:mb-0">
+            <div className="bg-white p-20 rounded-lg shadow-md hover:shadow-lg transition duration-300 max-w-xs mb-6 md:mb-0">
               <h4 className="text-xl font-bold mb-4 text-gray-800 text-center">Pro Plan</h4>
               <p className="text-gray-700 mb-4 text-center">$49/month</p>
               <ul className="text-gray-700 mb-6">
@@ -89,7 +89,7 @@ export default function Homepage() {
               </ul>
               <button className="bg-green-500 text-white w-full py-2 rounded hover:bg-green-600 transition duration-300">Choose Plan</button>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 max-w-xs">
+            <div className="bg-white p-20 rounded-lg shadow-md hover:shadow-lg transition duration-300 max-w-xs mb-6 md:mb-0">
               <h4 className="text-xl font-bold mb-4 text-gray-800 text-center">Enterprise Plan</h4>
               <p className="text-gray-700 mb-4 text-center">$99/month</p>
               <ul className="text-gray-700 mb-6">
@@ -101,82 +101,7 @@ export default function Homepage() {
             </div>
           </div>
         </section>
-        {/* About Section */}
-        <section id="about" className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-sky-600 text-center">About Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-sky-500 rounded-lg shadow-md p-6 hover:bg-sky-600 transition duration-300">
-              <h3 className="text-xl font-bold mb-2 text-white">What you can do?</h3>
-              <p className="text-white">
-                Empower yourself to create and manage stunning websites without
-                needing to be a coding whiz. Our user-friendly CMS platform
-                provides everything you need to get your project off the ground
-                and thriving online. Craft engaging content, manage user
-                permissions, and keep your website fresh – all from a single,
-                intuitive interface.
-              </p>
-            </div>
-            <div className="bg-sky-500 rounded-lg shadow-md p-6 hover:bg-sky-600 transition duration-300">
-              <h3 className="text-xl font-bold mb-2 text-white">What you will get?</h3>
-              <p className="text-white">
-                Whether you're a seasoned professional or a complete beginner, our
-                platform caters to all skill levels. Drag-and-drop functionality
-                makes creating beautiful pages a breeze, while a vast library of
-                customizable templates ensures your website reflects your unique
-                brand identity. Dive into the world of content creation with
-                confidence and showcase your vision to the world.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-sky-600 text-center">Contact Us</h2>
-          <form className="bg-white shadow-md rounded-lg px-8 py-6 mx-auto my-20 max-w-md">
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
-                type="text"
-                placeholder="Your name"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                Email
-              </label>
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email"
-                type="email"
-                placeholder="Your email"
-              />
-            </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="message"
-                placeholder="Your message"
-                rows="4"
-              ></textarea>
-            </div>
-            <div className="flex items-center justify-between">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="button"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </section>
       </main>
 
       {/* Footer */}

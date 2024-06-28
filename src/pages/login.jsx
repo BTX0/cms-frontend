@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import LoginForm from "../components/LoginForm"; // Adjust the path as needed
-import Navbar from "@/components/NavBar";
+import Navbar from "@/components/Navbar";
 
 export default function LoginPage() {
   return (

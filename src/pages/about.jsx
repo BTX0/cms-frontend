@@ -1,7 +1,7 @@
 // pages/about.js
 
 import Head from 'next/head';
-import Navbar from '../components/NavBar'; // Adjust the path as needed
+import Navbar from '../components/Navbar'; // Adjust the path as needed
 import '../app/globals.css';
 import Image from 'next/image'; // Use Next.js Image component for optimized images
 
@@ -32,7 +32,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="mt-10">
+        <section className="mt-10 mb-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded shadow">
               <h3 className="text-xl font-bold mb-2 text-sky-600">Our Mission</h3>
@@ -44,6 +44,34 @@ const AboutPage = () => {
               <h3 className="text-xl font-bold mb-2 text-sky-600">Our Vision</h3>
               <p className="text-gray-600">
                 To be the leading CMS provider, known for innovation, customer satisfaction, and the ability to make complex web development accessible to everyone.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* About Section */}
+        <section id="about" className="mb-16">
+         
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-sky-500 rounded-lg shadow-md p-6 hover:bg-sky-600 transition duration-300">
+              <h3 className="text-xl font-bold mb-2 text-white">What you can do?</h3>
+              <p className="text-white">
+                Empower yourself to create and manage stunning websites without
+                needing to be a coding whiz. Our user-friendly CMS platform
+                provides everything you need to get your project off the ground
+                and thriving online. Craft engaging content, manage user
+                permissions, and keep your website fresh – all from a single,
+                intuitive interface.
+              </p>
+            </div>
+            <div className="bg-sky-500 rounded-lg shadow-md p-6 hover:bg-sky-600 transition duration-300">
+              <h3 className="text-xl font-bold mb-2 text-white">What you will get?</h3>
+              <p className="text-white">
+                Whether you're a seasoned professional or a complete beginner, our
+                platform caters to all skill levels. Drag-and-drop functionality
+                makes creating beautiful pages a breeze, while a vast library of
+                customizable templates ensures your website reflects your unique
+                brand identity. Dive into the world of content creation with
+                confidence and showcase your vision to the world.
               </p>
             </div>
           </div>
