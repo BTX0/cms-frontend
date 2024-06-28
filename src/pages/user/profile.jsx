@@ -1,4 +1,5 @@
 import UserLayout from '../../components/UserLayout';
+import '../../app/globals.css';
 
 const ProfileSettings = () => {
   return (

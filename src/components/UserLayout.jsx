@@ -12,18 +12,18 @@ const UserLayout = ({ children }) => {
         <nav className="mt-8">
           <ul>
             <li>
-              <Link href="/user/dashboard">
-                <a className="block py-2 px-4 hover:bg-sky-800">Dashboard</a>
+              <Link href="/user/dashboard" className="block py-2 px-4 hover:bg-sky-800">
+                Dashboard
               </Link>
             </li>
             <li>
-              <Link href="/user/content">
-                <a className="block py-2 px-4 hover:bg-sky-800">Content Management</a>
+              <Link href="/user/content" className="block py-2 px-4 hover:bg-sky-800">
+                Content Management
               </Link>
             </li>
             <li>
-              <Link href="/user/profile">
-                <a className="block py-2 px-4 hover:bg-sky-800">Profile</a>
+              <Link href="/user/profile" className="block py-2 px-4 hover:bg-sky-800">
+                Profile
               </Link>
             </li>
           </ul>

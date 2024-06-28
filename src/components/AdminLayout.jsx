@@ -12,23 +12,23 @@ const AdminLayout = ({ children }) => {
         <nav className="mt-8">
           <ul>
             <li>
-              <Link href="/admin/dashboard">
-                <a className="block py-2 px-4 hover:bg-sky-800">Dashboard</a>
+              <Link href="/admin/dashboard" className="block py-2 px-4 hover:bg-sky-800">
+                Dashboard
               </Link>
             </li>
             <li>
-              <Link href="/admin/users">
-                <a className="block py-2 px-4 hover:bg-sky-800">User Management</a>
+              <Link href="/admin/users" className="block py-2 px-4 hover:bg-sky-800">
+                User Management
               </Link>
             </li>
             <li>
-              <Link href="/admin/content">
-                <a className="block py-2 px-4 hover:bg-sky-800">Content Management</a>
+              <Link href="/admin/content" className="block py-2 px-4 hover:bg-sky-800">
+                Content Management
               </Link>
             </li>
             <li>
-              <Link href="/admin/settings">
-                <a className="block py-2 px-4 hover:bg-sky-800">Settings</a>
+              <Link href="/admin/settings" className="block py-2 px-4 hover:bg-sky-800">
+                Settings
               </Link>
             </li>
           </ul>

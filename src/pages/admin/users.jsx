@@ -1,4 +1,5 @@
 import AdminLayout from '../../components/AdminLayout';
+import '../../app/globals.css';
 
 const UserManagement = () => {
   return (

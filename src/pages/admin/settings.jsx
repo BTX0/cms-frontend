@@ -1,5 +1,5 @@
 import AdminLayout from '../../components/AdminLayout';
-
+import '../../app/globals.css';
 const Settings = () => {
   return (
     <AdminLayout>
