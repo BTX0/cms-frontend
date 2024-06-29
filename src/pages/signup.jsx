@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import '../app/globals.css';
 import Navbar from '@/components/Navbar';
+import FormInput from '@/components/FormInput';
+import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
     username: '',
     fullName: '',
     email: '',
+    phone: '',
+    address: '',
     password: '',
     confirmPassword: '',
     role: 'user',
@@ -39,6 +44,8 @@ const SignupForm = () => {
     if (!formData.username) errors.username = 'Username is required';
     if (!formData.fullName) errors.fullName = 'Full Name is required';
     if (!formData.email) errors.email = 'Email is required';
+    if (!formData.phone) errors.phone = 'Phone number is required';
+    if (!formData.address) errors.address = 'Address is required';
     if (!formData.password) errors.password = 'Password is required';
     if (formData.password !== formData.confirmPassword) {
       errors.confirmPassword = 'Passwords do not match';
@@ -50,130 +57,120 @@ const SignupForm = () => {
   };
 
   return (
-<>
-<Navbar/>
-    
-    <div className="min-h-screen flex items-center justify-center bg-sky-100">
-        
-      <div className="bg-white p-8 rounded shadow-md w-full max-w-sm">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              value={formData.username}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
-              required
-            />
-            {errors.username && <p className="text-red-500 text-xs mt-1">{errors.username}</p>}
+    <>
+      <Navbar />
+      <div className="min-h-screen flex items-center justify-center bg-white ">
+        <div className="bg-white-100 p-6 m-10 rounded shadow-md w-full max-w flex">
+          <div className="w-1/2 pr-4">
+            <Image src="/signup.png" alt="Signup" className="rounded"width={1000} height={300} />
           </div>
-
-          <div>
-            <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
-              required
-            />
-            {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
-              required
-            />
-            {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-          </div>
-
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
-              required
-            />
-            {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
-          </div>
-
-          <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirm Password</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
-              required
-            />
-            {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>}
-          </div>
-
-          <div>
-            <label htmlFor="role" className="block text-sm font-medium text-gray-700">Role</label>
-            <select
-              id="role"
-              name="role"
-              value={formData.role}
-              onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
-              required
-            >
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
-              <option value="editor">Editor</option>
-            </select>
-          </div>
-
-          <div className="flex items-start">
-            <div className="flex items-center h-5">
-              <input
-                id="termsAccepted"
-                name="termsAccepted"
-                type="checkbox"
-                checked={formData.termsAccepted}
+          <div className="w-1/3 pl-5" >
+            <h2 className="text-3xl font-bold mb-6 text-sky-600 text-center">Sign Up</h2>
+            <p className="mb-4 text-gray-600 text-center">Create your account to access exclusive features and content.</p>
+            <form onSubmit={handleSubmit} className="space-y-4 text-black">
+              <FormInput
+                id="username"
+                label="Username"
+                type="text"
+                value={formData.username}
                 onChange={handleChange}
-                className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
-                required
+                error={errors.username}
               />
-            </div>
-            <div className="ml-3 text-sm">
-              <label htmlFor="termsAccepted" className="font-medium text-gray-700">
-                I accept the <a href="#" className="text-sky-600 hover:underline">Terms and Conditions</a>
-              </label>
-              {errors.termsAccepted && <p className="text-red-500 text-xs mt-1">{errors.termsAccepted}</p>}
-            </div>
+              <FormInput
+                id="fullName"
+                label="Full Name"
+                type="text"
+                value={formData.fullName}
+                onChange={handleChange}
+                error={errors.fullName}
+              />
+              <FormInput
+                id="email"
+                label="Email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                error={errors.email}
+              />
+              <FormInput
+                id="phone"
+                label="Phone Number"
+                type="text"
+                value={formData.phone}
+                onChange={handleChange}
+                error={errors.phone}
+              />
+              <FormInput
+                id="address"
+                label="Address"
+                type="text"
+                value={formData.address}
+                onChange={handleChange}
+                error={errors.address}
+              />
+              <FormInput
+                id="password"
+                label="Password"
+                type="password"
+                value={formData.password}
+                onChange={handleChange}
+                error={errors.password}
+              />
+              <FormInput
+                id="confirmPassword"
+                label="Confirm Password"
+                type="password"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                error={errors.confirmPassword}
+              />
+              <div>
+                <label htmlFor="role" className="block text-sm font-medium text-gray-700">Role</label>
+                <select
+                  id="role"
+                  name="role"
+                  value={formData.role}
+                  onChange={handleChange}
+                  className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                  required
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                  <option value="editor">Editor</option>
+                </select>
+              </div>
+              <div className="flex items-start">
+                <div className="flex items-center h-5">
+                  <input
+                    id="termsAccepted"
+                    name="termsAccepted"
+                    type="checkbox"
+                    checked={formData.termsAccepted}
+                    onChange={handleChange}
+                    className="focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded"
+                    required
+                  />
+                </div>
+                <div className="ml-3 text-sm">
+                  <label htmlFor="termsAccepted" className="font-medium text-gray-700">
+                    I accept the <a href="#" className="text-sky-600 hover:underline">Terms and Conditions</a>
+                  </label>
+                  {errors.termsAccepted && <p className="text-red-500 text-xs mt-1">{errors.termsAccepted}</p>}
+                </div>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </form>
           </div>
-
-          <div>
-            <button
-              type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
-            >
-              Sign Up
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
+      <Footer/>
     </>
   );
 };

@@ -1,7 +1,7 @@
 // components/Navbar.js
 
 import React from 'react';
-import Link from 'next/link';
+
 
 const Navbar = () => {
   return (
@@ -11,6 +11,9 @@ const Navbar = () => {
         <nav className="flex space-x-4">
             <a href="/" className="text-gray-600 hover:text-gray-800">
               Home
+            </a>
+            <a href="/blogs" className="text-gray-600 hover:text-gray-800">
+              Blogs
             </a>
             <a href="/about" className="text-gray-600 hover:text-gray-800">
               About

@@ -1,5 +1,6 @@
 // pages/index.js
 
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Head from 'next/head';
 
@@ -104,29 +105,7 @@ export default function Homepage() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="bg-sky-500 text-white py-4">
-        <div className="container mx-auto px-6 flex flex-wrap justify-between">
-          <p className="text-xs">© 2024 - CMS Platform</p>
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#about" className="hover:text-sky-100">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-sky-100">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-sky-100">
-                Terms & Conditions
-              </a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }

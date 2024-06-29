@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Navbar from '../components/Navbar'; // Adjust the path as needed
 import '../app/globals.css';
 import Image from 'next/image'; // Use Next.js Image component for optimized images
+import Footer from '@/components/Footer';
 
 const AboutPage = () => {
   return (
@@ -23,7 +24,8 @@ const AboutPage = () => {
           </p>
           <div className="flex justify-center">
             <Image
-              src="/about-illustration.svg" // Replace with your illustration's path
+              src="/about-us.png" // Replace with your illustration's path
+
               alt="About Us"
               width={500}
               height={300}
@@ -78,22 +80,7 @@ const AboutPage = () => {
         </section>
       </main>
 
-      <footer className="bg-sky-500 text-white py-4">
-        <div className="container mx-auto px-4 flex flex-wrap justify-between">
-          <p className="text-xs">© 2024 - Your Company Name</p>
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#" className="hover:text-sky-100">Home</a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-sky-100">Contact</a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-sky-100">Terms & Conditions</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };
