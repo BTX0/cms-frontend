@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../app/globals.css';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 import FormInput from '@/components/FormInput';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -42,7 +42,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <Navbar />
+     <Navbar/>
       <div className="min-h-screen flex items-center justify-center bg-white">
         <div className="bg-white p-4 rounded shadow-md w-full max-w flex items-center">
           <div className="w-1/2 pr-4 flex justify-center">
