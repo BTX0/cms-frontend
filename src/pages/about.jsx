@@ -1,7 +1,7 @@
 // pages/about.js
 
 import Head from 'next/head';
-import Navbar from '../components/Navbar'; // Adjust the path as needed
+import Navbar from '../components/Navbars/Navbar'; // Adjust the path as needed
 import '../app/globals.css';
 import Image from 'next/image'; // Use Next.js Image component for optimized images
 import Footer from '@/components/Footer';

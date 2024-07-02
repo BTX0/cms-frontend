@@ -1,7 +1,8 @@
 // pages/index.js
 
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbars/Navbar';
+
 import Head from 'next/head';
 
 export default function Homepage() {
@@ -16,7 +17,7 @@ export default function Homepage() {
       {/* Header */}
       <header className="bg-white shadow-md">
 
-        <Navbar />
+     <Navbar/>
 
       </header>
 

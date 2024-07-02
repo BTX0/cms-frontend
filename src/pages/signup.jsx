@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../app/globals.css';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbars/Navbar';
 import FormInput from '@/components/FormInput';
 import Image from 'next/image';
 import Footer from '@/components/Footer';
