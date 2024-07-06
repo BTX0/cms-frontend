@@ -8,7 +8,7 @@ const BlogNavbar = () => {
       <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <h1 className="text-3xl font-bold text-sky-600">NextGenInfo</h1>
         <nav className="flex space-x-3">
-          <Link href="/" legacyBehavior>
+          <Link href="/blogs/blog" legacyBehavior>
             <a className="text-gray-600 hover:text-gray-800">Home</a>
           </Link>
           <Link href="/blogs" legacyBehavior>
