@@ -11,7 +11,7 @@ const BlogNavbar = () => {
           <Link href="/blogs/blog" legacyBehavior>
             <a className="text-gray-600 hover:text-gray-800">Home</a>
           </Link>
-          <Link href="/blogs" legacyBehavior>
+          <Link href="/blogs/blogmainpage" legacyBehavior>
             <a className="text-gray-600 hover:text-gray-800">Blogs</a>
           </Link>
           <Link href="/about" legacyBehavior>
