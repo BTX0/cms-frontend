@@ -1,7 +1,9 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import BlogNavbar from '@/components/BlogNavbar';
-import Footer from '@/components/Footer';
+import '../../app/globals.css';
+
+import BlogNavbar from '@/components/Navbars/Navbarforblogs';
+import Footerforblog from '@/components/Footers/Footerforblog';
 
 // Mock data for a single blog
 const mockBlog = {
@@ -31,7 +33,7 @@ const BlogPage = () => {
           <div dangerouslySetInnerHTML={{ __html: blog.content }} />
         </div>
       </main>
-      <Footer />
+      <Footerforblog />
     </div>
   );
 };
