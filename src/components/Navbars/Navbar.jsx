@@ -9,7 +9,7 @@ const Navbar = () => {
           <a href="/" className="text-gray-600 hover:text-gray-800">
             Home
           </a>
-          <a href="/blogs/blog" className="text-gray-600 hover:text-gray-800">
+          <a href="/blogs" className="text-gray-600 hover:text-gray-800">
             Blogs
           </a>
           <a href="/about" className="text-gray-600 hover:text-gray-800">

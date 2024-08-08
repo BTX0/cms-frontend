@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../app/globals.css';
-import Navbar from '@/components/Navbar';
+import '../../app/globals.css';
 import FormInput from '@/components/FormInput';
-import loginImage from '../public/login-image.jpg';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import BlogNavbar from '@/components/Navbars/Navbarforblogs';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -42,11 +42,11 @@ const LoginForm = () => {
 
   return (
     <>
-      <Navbar />
+      <BlogNavbar/>
       <div className="min-h-screen flex items-center justify-center bg-sky-100">
         <div className="bg-white p-8 rounded shadow-md w-full max-w-4xl flex">
           <div className="w-1/2 pr-4">
-            <Image src={loginImage} alt="Login" className="rounded" />
+            {/* <Image src={loginImage} alt="Login" className="rounded" /> */}
           </div>
           <div className="w-1/2 pl-4">
             <h2 className="text-3xl font-bold mb-6 text-sky-600 text-center">Log In</h2>

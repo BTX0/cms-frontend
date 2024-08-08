@@ -20,9 +20,7 @@ const BlogNavbar = () => {
           <Link href="/write" legacyBehavior>
             <a className="text-gray-600 hover:text-gray-800">Write</a>
           </Link>
-          <Link href="/signin" legacyBehavior>
-            <a className="text-gray-600 hover:text-gray-800">Sign In</a>
-          </Link>
+          
         </nav>
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
           {/* Search Bar */}
